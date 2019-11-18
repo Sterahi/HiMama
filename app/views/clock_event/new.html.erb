@@ -1,0 +1,12 @@
+<div class ="row">
+    <%= form_for @event, url: 'new' do |f| %>
+        <label for = "event_type">Type of Event</label>
+        <%= f.text_field :event_type, class: 'form-control' %>
+        <br />
+        <label for = "user_id">User</label>
+
+        <%= select_tag "user_id", options_from_collection_for_select(@users, "id", "name"), {class: 'form-control'} %>
+        <br />
+        <%= f.submit class: 'btn btn-primary'%>
+    <% end %>
+</div>

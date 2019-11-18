@@ -1,0 +1,26 @@
+<div class = "container default-border">
+    <div class = "row">
+        <h1 class = "col-md-8 col-12">Users</h1>
+        <div class = "col-md-4 col-12">
+            <%= link_to("Create New User", '/user/users/invitation/new', class: "btn btn-success")%>
+        </div>
+    </div>
+  <div class="table-responsive">
+      <table class="table table-striped">
+          <tr>
+              <th>Name</th>
+              <th>Management</th>
+          </tr>
+          <% @users.each do |u| %>
+            <tr>
+              <td><%= u.name %></td>
+                <td>
+                    <%= link_to("Update User",
+                    edit_user_url(u),
+                    class: "btn btn-primary")%>
+                </td>
+            </tr>
+          <% end %>
+      </table>
+  </div>
+</div>

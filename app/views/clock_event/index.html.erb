@@ -1,0 +1,35 @@
+<div class = "row">
+    <div class = "col-12 row">
+        <h1 class = "col-12 col-md-8">Event log</h1>
+        <div class = "col-md-4" style = "align-self: center;">
+            <a href ="clock_event/new" class ="btn btn-primary">New Event</a>
+        </div>
+    </div>
+    <div class = "col-12">
+        <table class = "table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Time</th>
+                <th>Management</th>
+            </tr>
+            <% @events.each do |e| %>
+                <tr style = "align-items:center;">
+                    <td><%= e.user.first.name %></td>
+                    <td><%= e.event_type %></td>
+                    <td><%= e.created_at %></td>
+                    <td>
+                        <%= link_to("Update event",
+                        edit_clock_event_url(e),
+                        class: "btn btn-primary")%>
+                        <%= link_to("Delete user",
+                        clock_event_path(e),
+                        :data => { :confirm => "Are you sure?" },
+                        :method => :delete,
+                        :class => 'btn btn-danger')%>
+                    </td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+</div>
