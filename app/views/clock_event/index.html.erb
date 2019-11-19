@@ -22,11 +22,6 @@
                         <%= link_to("Update event",
                         edit_clock_event_url(e),
                         class: "btn btn-primary")%>
-                        <%= link_to("Delete user",
-                        clock_event_path(e),
-                        :data => { :confirm => "Are you sure?" },
-                        :method => :delete,
-                        :class => 'btn btn-danger')%>
                     </td>
                 </tr>
             <% end %>
