@@ -6,7 +6,15 @@
         <label for = "user_id">User</label>
 
         <%= select_tag "user_id", options_from_collection_for_select(@users, "id", "name"), {class: 'form-control'} %>
+        <small>You must have a user to associate the event with, click <a href = "/user/new">here to create a user</a></small>
         <br />
-        <%= f.submit class: 'btn btn-primary'%>
+        <%= f.submit class: 'btn btn-primary', id: 'submit'%>
     <% end %>
 </div>
+<script>
+    var e = document.getElementById("user_id");
+    var user_id = e.options[e.selectedIndex];
+    if(user_id === undefined) {
+        document.getElementById('submit').disabled = true
+    }
+</script>
