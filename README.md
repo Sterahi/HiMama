@@ -1,24 +1,8 @@
-# README
+DEMO: https://fathomless-journey-58647.herokuapp.com/ (please be patient, it's on a free Heroku dyno)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TASK: 
+- **Build a simple clock in/clock out application**
+  - Allow a user to enter their name or log in
+  - Allow the user to clock in or out
+  - Upon a clock event, store the information.
+- Provide a list of all clock events.
